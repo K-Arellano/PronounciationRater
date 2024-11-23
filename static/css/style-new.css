@@ -1,0 +1,256 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2b2d42;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Home Icon */
+.material-icons.icon-text-home {
+    font-size: 2rem;
+    color: #2b2d42;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.material-icons.icon-text-home:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown for Language */
+.accuracy-text {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0.5em 0;
+    color: #4a4e69;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #4a4e69;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4f6f9;
+}
+
+/* Accuracy and Language section */
+#section_accuracy {
+    font-size: 1.2rem;
+    color: #2b2d42;
+    margin-left: 1em;
+}
+
+.horizontal-flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main Text Section */
+.main-text-div {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.main-text {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #2b2d42;
+}
+
+.ipa-text {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #6c6f7e;
+}
+
+.bigger-text {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+/* Play and Record Buttons */
+.round-button, .round-button-mic {
+    border-radius: 50%;
+    background-color: #2b2d42;
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.round-button:hover, .round-button-mic:hover {
+    background-color: #1d2140;
+}
+
+.round-button.disabled, .round-button-mic.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#playSampleAudio, #playRecordedAudio {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+#recordAudio {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}
+
+/* Next Button */
+.button-next {
+    background-color: #5d5f77;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-next:hover {
+    background-color: #3f4251;
+}
+
+#nextButtonDiv {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+/* Radio Buttons */
+.radio {
+    position: fixed;
+    top: 95%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio input[type="radio"] {
+    accent-color: #2b2d42;
+}
+
+/* Footer Section */
+.credits-icon-div, .link-icon-div {
+    text-align: center;
+    margin-top: 2em;
+    color: #6c6f7e;
+}
+
+.credits-icon-div {
+    font-size: 1rem;
+}
+
+.link-icon-div svg {
+    fill: #2b2d42;
+    width: 24px;
+    height: 24px;
+    margin: 0 15px;
+    transition: fill 0.3s ease;
+}
+
+.link-icon-div svg:hover {
+    fill: #1d2140;
+}
+
+/* Container Styles */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+.container-small {
+    width: 100%;
+    padding: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.expand {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.mic-button-div {
+    margin-top: 2em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #playSampleAudio, #playRecordedAudio {
+        top: 15%;
+        left: 15%;
+    }
+
+    #recordAudio {
+        bottom: 15%;
+        left: 35%;
+    }
+
+    .main-text {
+        font-size: 1.3em;
+    }
+
+    .dropdown-content {
+        min-width: 120px;
+    }
+}
